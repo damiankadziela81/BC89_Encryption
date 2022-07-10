@@ -3,18 +3,15 @@ import java.util.*;
 public class Encryption {
 
     private Scanner scanner;
-    private Random random;
-    private ArrayList<Character> list;
+    private final ArrayList<Character> list;
     private ArrayList<Character> shuffledList;
     private char character;
-    private String line;
     private char[] letters;
 
 
     Encryption(){
 
         scanner = new Scanner(System.in);
-        random = new Random();
         list = new ArrayList<>();
         shuffledList = new ArrayList<>();
         character = ' ';
@@ -57,7 +54,7 @@ public class Encryption {
         shuffledList.clear();
 
         for (int i=32;i<127;i++){
-            list.add(Character.valueOf(character));
+            list.add(character);
             character++;
         }
 
